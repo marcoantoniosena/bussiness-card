@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Card Principal */
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* Cabeçalho Azul */
+.card-header {
+    background: linear-gradient(135deg, #4a69bd 0%, #5a7dd4 100%);
+    height: 120px;
+    position: relative;
+}
+
+/* Conteúdo do Card */
+.card-content {
+    padding: 60px 30px 30px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Foto de Perfil */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Nome */
+.card-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/* Profissão */
+.card-title {
+    font-size: 14px;
+    color: #718096;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Redes Sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.social-icon.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon.facebook:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+.social-icon.twitter {
+    background-color: #1da1f2;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1a8cd8;
+    transform: translateY(-3px);
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+}
+
+.social-icon.linkedin:hover {
+    background-color: #005885;
+    transform: translateY(-3px);
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.instagram:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.9);
+}
+
+.social-icon.youtube {
+    background-color: #ff0000;
+}
+
+.social-icon.youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-3px);
+}
+
+.social-icon.github {
+    background-color: #333333;
+}
+
+.social-icon.github:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-3px);
+}
+
+/* Grupo de Botões */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a69bd 0%, #5a7dd4 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 105, 189, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: white;
+    color: #4a69bd;
+    border: 2px solid #4a69bd;
+}
+
+.btn-secondary:hover {
+    background: #f7fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 105, 189, 0.2);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* Estatísticas */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 25px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-item i {
+    font-size: 18px;
+    color: #4a69bd;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .card-content {
+        padding: 60px 20px 20px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+    }
+
+    .card-name {
+        font-size: 22px;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        flex: 1;
+        min-width: 140px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+}
